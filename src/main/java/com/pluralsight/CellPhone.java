@@ -1,7 +1,7 @@
 package com.pluralsight;
 
 public class CellPhone {
-
+    //private variables only for this class
     private int serialNumber;
     private String model;
     private String carrier;
