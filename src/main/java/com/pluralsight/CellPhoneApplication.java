@@ -20,7 +20,7 @@ public class CellPhoneApplication {
         CellPhone cellPhone2 = new CellPhone(1000000, "Iphone 17", "Spectrum", "207-207-2007", "kingJames"); //Overload the second cellPhone with this fixed Info
         //Make cell 1 call cell 2
         cellPhone1.dial(cellPhone2.getPhoneNumber());
-        cellPhone2.dial(cellPhone1.getPhoneNumber());
+        cellPhone2.dial(cellPhone1);
         //Display both Phone Info
         display(cellPhone1);
         display(cellPhone2);

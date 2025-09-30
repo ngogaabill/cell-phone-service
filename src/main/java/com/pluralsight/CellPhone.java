@@ -39,7 +39,7 @@ public class CellPhone {
     }
 
     // Setter methods.
-    public void getSerialNumber(int serialNumber) {
+    public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
 
@@ -62,6 +62,10 @@ public class CellPhone {
     public void dial(String phoneNumber){
         System.out.printf("%s's phone is calling %s\n",getOwner(),phoneNumber);
 
+    }
+    //Overloaded dial Method
+    public void dial(CellPhone phone){
+        System.out.printf("%s's phone is calling %s\n",getOwner(),phone.phoneNumber);
     }
 
 }
