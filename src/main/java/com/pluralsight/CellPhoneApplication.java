@@ -16,15 +16,23 @@ public class CellPhoneApplication {
         String phoneNumber = scnr.nextLine();
         System.out.print("Who is the owner of the phone?");
         String phoneOwner = scnr.nextLine();
-        CellPhone myphone = new CellPhone(serialNumber, phoneModel, carrier, phoneNumber, phoneOwner); //Take the parameters to the Cellphone class
+        CellPhone cellPhone1 = new CellPhone(serialNumber, phoneModel, carrier, phoneNumber, phoneOwner); //Take the parameters to the Cellphone class
+        CellPhone cellPhone2 = new CellPhone(1000000, "Iphone 17", "Spectrum", "207-207-2007", "kingJames"); //Overload the second cellPhone with this fixed Info
+        //Make cell 1 call cell 2
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
+        //Display both Phone Info
+        display(cellPhone1);
+        display(cellPhone2);
 
-        //Print the Info on the screen.
-        System.out.println("Hey,  " + myphone.getOwner());
-        System.out.println("Your Serial number is: " + myphone.getSerialNumber());
-        System.out.println("Your Phone Model: " + myphone.getModel());
-        System.out.println("Your Carrier: " + myphone.getCarrier());
-        System.out.println("Your Phone Number: " + myphone.getPhoneNumber());
+    }
 
+    public static void display(CellPhone phone) {
+        System.out.println("The Owner is ,  " + phone.getOwner());
+        System.out.println("Serial number is: " + phone.getSerialNumber());
+        System.out.println("Phone Model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone Number: " + phone.getPhoneNumber());
 
     }
 
